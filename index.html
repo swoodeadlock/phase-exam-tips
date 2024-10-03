@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase Exams Study Tips</title>
+    <style>
+        /* Reset some default browser styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #34495e;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 5px 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 2px solid #2980b9;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #2980b9;
+            color: #fff;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #2980b9;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #16a085;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .tip-number {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            nav ul li a {
+                padding: 5px 8px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+    <script>
+        // Highlight active navigation link based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Back to Top Button (Optional Enhancement)
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopButton = document.createElement('button');
+            backToTopButton.id = 'backToTop';
+            backToTopButton.textContent = 'Top';
+            document.body.appendChild(backToTopButton);
+
+            backToTopButton.style.position = 'fixed';
+            backToTopButton.style.bottom = '20px';
+            backToTopButton.style.right = '20px';
+            backToTopButton.style.padding = '10px 15px';
+            backToTopButton.style.backgroundColor = '#2980b9';
+            backToTopButton.style.color = '#fff';
+            backToTopButton.style.border = 'none';
+            backToTopButton.style.borderRadius = '4px';
+            backToTopButton.style.cursor = 'pointer';
+            backToTopButton.style.display = 'none';
+            backToTopButton.style.transition = 'background-color 0.3s';
+
+            backToTopButton.addEventListener('mouseenter', () => {
+                backToTopButton.style.backgroundColor = '#1f6391';
+            });
+
+            backToTopButton.addEventListener('mouseleave', () => {
+                backToTopButton.style.backgroundColor = '#2980b9';
+            });
+
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Phase Exams Study Tips</h1>
+        <p>Successfully Navigating Your Phase Exams with Insights from Your Peers</p>
+    </header>
+
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#tip1">1. Start Early</a></li>
+                <li><a href="#tip2">2. Practice with Case Studies</a></li>
+                <li><a href="#tip3">3. Study with Peers</a></li>
+                <li><a href="#tip4">4. Reflect and Adapt</a></li>
+                <li><a href="#tip5">5. Prioritize Herbs</a></li>
+                <li><a href="#tip6">6. Utilize Resources</a></li>
+                <li><a href="#tip7">7. Understand Over Memorize</a></li>
+                <li><a href="#tip8">8. Master Diagnosis</a></li>
+                <li><a href="#tip9">9. Integrate Herbology</a></li>
+                <li><a href="#tip10">10. Grasp Point Categories</a></li>
+                <li><a href="#tip11">11. Embrace Theory</a></li>
+                <li><a href="#tip12">12. Exam Details</a></li>
+            </ul>
+        </nav>
+
+        <section id="tip1">
+            <h3><span class="tip-number">1. Start Early and Stay Consistent</span></h3>
+            <ul>
+                <li><strong>Begin Early:</strong> Initiate your study plan from the very beginning of your program. Consistent, gradual studying helps avoid last-minute cramming and reduces stress.</li>
+                <li><strong>Daily Study Routine:</strong> Allocate specific hours each day to review and reinforce your knowledge. Even dedicating a few hours consistently can make a significant difference over time.</li>
+            </ul>
+        </section>
+
+        <section id="tip2">
+            <h3><span class="tip-number">2. Practice with Case Studies and Test Questions</span></h3>
+            <ul>
+                <li><strong>Case Study Analysis:</strong> Regularly work through case studies to improve your analytical skills and application of theoretical knowledge.</li>
+                <li><strong>Mock Exams:</strong> Use case study test questions or similar resources to simulate exam conditions and identify areas needing improvement.</li>
+            </ul>
+        </section>
+
+        <section id="tip3">
+            <h3><span class="tip-number">3. Study with Peers</span></h3>
+            <ul>
+                <li><strong>Group Study Sessions:</strong> Collaborate with classmates to discuss and solve practice questions together. This collaborative approach can provide new insights and reinforce your understanding.</li>
+                <li><strong>Peer Feedback:</strong> Reviewing questions and explanations with peers helps in identifying and addressing your weaknesses effectively.</li>
+            </ul>
+        </section>
+
+        <section id="tip4">
+            <h3><span class="tip-number">4. Reflect and Adapt Your Study Methods</span></h3>
+            <ul>
+                <li><strong>Self-Assessment:</strong> Continuously assess your study methods and adapt them based on what works best for you. Whether it's flashcards for Western Medicine or in-depth theory for Oriental Medicine, find the techniques that enhance your learning.</li>
+                <li><strong>Feedback Utilization:</strong> Incorporate feedback from professors and peers to refine your study approach and address any gaps in your knowledge.</li>
+            </ul>
+        </section>
+
+        <section id="tip5">
+            <h3><span class="tip-number">5. Prioritize Categories of Herbs and Formulas</span></h3>
+            <ul>
+                <li><strong>Focused Study:</strong> Instead of trying to study everything at once, prioritize learning the categories and chapters of herbs and formulas. Understanding which category each herb or formula belongs to can streamline your study process and improve retention.</li>
+                <li><strong>Structured Approach:</strong> Organizing your study material by categories helps in creating a clear and manageable study plan, making it easier to recall information during exams.</li>
+                <li><strong>Insight from Yaron Cohen:</strong> Consider prioritizing the categories and chapters of herbs and formulas. He advises against attempting to study "everything" simultaneously, as this can lead to being overwhelmed and less effective retention. Focusing on specific categories ensures a more organized and efficient study process.</li>
+            </ul>
+        </section>
+
+        <section id="tip6">
+            <h3><span class="tip-number">6. Utilize Comprehensive Study Resources</span></h3>
+            <ul>
+                <li><strong>Recommended Materials:</strong>
+                    <ul>
+                        <li><strong>Resources:</strong> Utilize board exam resources and prep courses such as HB Kim, TCMtest.com, and the resources listed on the NCCAOM website, which many found beneficial.</li>
+                        <li><strong>Course Materials:</strong> Regularly review your course notes and materials to ensure a strong grasp of the content.</li>
+                    </ul>
+                </li>
+                <li><strong>Study Guides:</strong> Follow the phase exam guides available on Populi to understand the exam structure and the topics covered.</li>
+            </ul>
+        </section>
+
+        <section id="tip7">
+            <h3><span class="tip-number">7. Focus on Understanding Over Memorization</span></h3>
+            <ul>
+                <li><strong>Deep Comprehension:</strong> Strive to understand the relationships and theories behind the material rather than merely memorizing facts. This deeper understanding allows you to reason through complex questions effectively.</li>
+                <li><strong>Foundational Knowledge:</strong> Invest time in comprehending the foundational aspects of Oriental Medicine, including patterns, point categories, and their functions.</li>
+            </ul>
+        </section>
+
+        <section id="tip8">
+            <h3><span class="tip-number">8. Master Tongue and Pulse Diagnosis</span></h3>
+            <ul>
+                <li><strong>Diagnostic Skills:</strong> Enhance your proficiency in tongue and pulse diagnosis, as these are critical components of many exam questions.</li>
+                <li><strong>Pattern Recognition:</strong> Develop the ability to accurately identify and interpret various TCM patterns, which will aid in diagnosing and selecting appropriate treatments.</li>
+            </ul>
+        </section>
+
+        <section id="tip9">
+            <h3><span class="tip-number">9. Integrate Herbology with Other Subjects</span></h3>
+            <ul>
+                <li><strong>Concurrent Study:</strong> Study herbs alongside acupuncture and Oriental Medicine classes. Understanding herbs in conjunction with other subjects can deepen your overall comprehension and application of TCM principles.</li>
+                <li><strong>Theoretical Connections:</strong> Recognizing how herbology complements acupuncture and theory enhances your ability to see the bigger picture and apply knowledge flexibly.</li>
+            </ul>
+        </section>
+
+        <section id="tip10">
+            <h3><span class="tip-number">10. Develop a Strong Grasp of Point Categories and Functions</span></h3>
+            <ul>
+                <li><strong>Point Functions:</strong> Memorize and understand the various point categories such as Five Shu, Back-Shu, Front-Mu, Xi-Cleft, and Luo-Connecting points.</li>
+                <li><strong>Practical Application:</strong> Apply your knowledge of point functions in clinical scenarios to solidify your understanding and improve retention.</li>
+            </ul>
+        </section>
+
+        <section id="tip11">
+            <h3><span class="tip-number">11. Embrace the Theory and Relationships in TCM</span></h3>
+            <ul>
+                <li><strong>Theoretical Framework:</strong> Dive deep into the theoretical aspects of Traditional Chinese Medicine. Understanding the interconnections between different concepts enables you to navigate complex exam questions with confidence.</li>
+                <li><strong>Practical Insights:</strong> Observe and participate in practical sessions to see how theoretical knowledge is applied in real-life scenarios, enhancing both understanding and retention.</li>
+            </ul>
+        </section>
+
+        <section id="tip12">
+            <h3><span class="tip-number">12. Pay Attention to Exam Details</span></h3>
+            <ul>
+                <li><strong>Careful Reading:</strong> Read each question thoroughly during the exam. Pay close attention to details to avoid misinterpretation and ensure you select the most accurate answer.</li>
+                <li><strong>Answer Strategy:</strong> If unsure about an answer, use logical reasoning to narrow down the options. Sometimes, choosing the opposite of a similar option can be an effective strategy.</li>
+            </ul>
+        </section>
+
+        <section>
+            <p>By implementing these strategies and maintaining a disciplined study routine, you can approach your phase exams with confidence and competence. Remember, consistent effort and a deep understanding of the material are key to your success.</p>
+            <p>Good luck!</p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Your School Name. All rights reserved.
+    </footer>
+
+</body>
+</html>
